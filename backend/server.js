@@ -1,6 +1,8 @@
 import express from 'express';
 import dotenv from 'dotenv';
+import cookieParser from 'cookie-parser';
 import { connectDB } from './config/db.js';
+import authRoutes from './routes/auth.routes.js';
 
 dotenv.config(); // Load environment variables from .env file
 
@@ -8,12 +10,12 @@ const app = express()
 
 connectDB(); // Connect to the database
 
-app.use(express.json());
+app.use(express.json()); // Middleware to parse JSON request bodies
 
-app.get('/', (req, res) => {
-    res.send('Hello from the Ticket System backend!');
-})
+app.use(cookieParser()); // Middleware to parse cookies
 
+// auth routes
+app.use('/auth', authRoutes);
 
 //start server
 const PORT = process.env.PORT || 5001;
