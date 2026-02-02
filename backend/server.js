@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import cookieParser from 'cookie-parser';
 import { connectDB } from './config/db.js';
 import authRoutes from './routes/auth.routes.js';
+import ticketRoutes from './routes/ticket.routes.js';
 
 dotenv.config(); // Load environment variables from .env file
 
@@ -16,6 +17,8 @@ app.use(cookieParser()); // Middleware to parse cookies
 
 // auth routes
 app.use('/auth', authRoutes);
+// ticket routes
+app.use("/tickets", ticketRoutes);
 
 //start server
 const PORT = process.env.PORT || 5001;
