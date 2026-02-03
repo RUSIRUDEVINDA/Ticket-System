@@ -132,6 +132,22 @@ To run this project, you will need to add the following environment variables to
 
 ---
 
+# 📚 API Documentation
+
+This project includes fully configured **Postman Collections** to help you test the API easily.
+
+### 📥 How to Import
+1.  Navigate to the `backend/postman` folder in this repository.
+2.  Open **Postman**.
+3.  Click the **Import** button (top left).
+4.  Drag and drop the following files:
+    - `Auth.postman_collection.json`
+    - `Ticket.postman_collection.json`
+    - `Comment.postman_collection.json`
+5.  All endpoints will be available in your Postman workspace, organized by functionality.
+
+---
+
 ## 🛣️ API Endpoints (Quick Reference)
 
 ### Auth
