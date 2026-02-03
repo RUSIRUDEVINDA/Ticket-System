@@ -1,9 +1,28 @@
 import Comment from "../models/Comment.js";
 import Ticket from "../models/Ticket.js";
 
+// Validation helper functions
+const validateMessage = (message) => {
+    if (!message || typeof message !== "string") return false;
+    const trimmed = message.trim();
+    return trimmed.length >= 1 && trimmed.length <= 5000;
+};
+
 // POST /tickets/:id/comments 
 export const addComment = async (req, res) => {
     try {
+        const { message } = req.body || {};
+
+        // Validate required fields
+        if (!message) {
+            return res.status(400).json({ error: "Message is required" });
+        }
+
+        // Validate message
+        if (!validateMessage(message)) {
+            return res.status(400).json({ error: "Message must be 1-5000 characters" });
+        }
+
         const ticket = await Ticket.findById(req.params.id);
 
         if (!ticket) {
@@ -20,7 +39,7 @@ export const addComment = async (req, res) => {
 
         const comment = await Comment.create({
             ticketId: ticket._id,
-            message: req.body.message,
+            message: message.trim(), //removes whitespace from both ends
             createdBy: req.user._id
         });
 
