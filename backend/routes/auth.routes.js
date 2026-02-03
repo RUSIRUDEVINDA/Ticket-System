@@ -1,11 +1,9 @@
 import express from "express";
-import { register,login} from "../controllers/auth.controller.js";
-import { protect } from "../middleware/auth.middleware.js";
-import { protectRoute } from "../middleware/role.middleware.js";
-import { authorizeRole } from "../middleware/role.middleware.js";
+import { register, login } from "../controllers/auth.controller.js";
 
 const router = express.Router();
 
+// Public routes - no authentication required
 router.post("/register", register);
 router.post("/login", login);
 
