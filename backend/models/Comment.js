@@ -6,12 +6,10 @@ const commentSchema = new mongoose.Schema({
         ref: "Ticket",
         required: true
     },
-
     message: {
         type: String,
         required: true
     },
-
     createdBy: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "User",
@@ -19,7 +17,6 @@ const commentSchema = new mongoose.Schema({
     }
 },
     { timestamps: true }
-
 )
 
 export default mongoose.model("Comment", commentSchema);
