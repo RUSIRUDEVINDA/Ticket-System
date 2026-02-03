@@ -132,7 +132,7 @@ To run this project, you will need to add the following environment variables to
 
 ---
 
-# 📚 API Documentation
+## 📚 API Documentation
 
 This project includes fully configured **Postman Collections** to help you test the API easily.
 
