@@ -1,0 +1,228 @@
+{
+  "info": {
+    "_postman_id": "0bdc6cb0-1178-4b85-aa2b-5fd43e298a0a",
+    "name": "Ticket",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "41718582",
+    "_collection_link": "https://go.postman.co/collection/41718582-0bdc6cb0-1178-4b85-aa2b-5fd43e298a0a?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "CREATE TICKET",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODBlZjIwMmRmYTMyOTFkZGFiYTU4OSIsImlhdCI6MTc3MDA1ODU0OCwiZXhwIjoxNzcwNjYzMzQ4fQ.FwLjNR3HMEEmRcBBHu1fHWvaJfaR_Kehoh99bF0M5LY",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": " {\r\n    \"title\": \"Contact numbers issue \",\r\n    \"description\": \"Contact Numbers are invalide\",\r\n    \"category\": \"Technical\",\r\n    \"priority\": \"High\"\r\n  }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{BaseURL}}/tickets",
+          "host": [
+            "{{BaseURL}}"
+          ],
+          "path": [
+            "tickets"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET TICKET",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODBhODY1YmExYmJkNjM2ZWFlZTRiNSIsImlhdCI6MTc3MDA2MzUyOSwiZXhwIjoxNzcwNjY4MzI5fQ.3U1yPf0FAjutCWYUf5jdFnceRAjwKPzMNDyGd0N6rMg",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "{{BaseURL}}/tickets/6980e046f8e51dcd1aa28236",
+          "host": [
+            "{{BaseURL}}"
+          ],
+          "path": [
+            "tickets",
+            "6980e046f8e51dcd1aa28236"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET ALL TICKETS",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODBhODY1YmExYmJkNjM2ZWFlZTRiNSIsImlhdCI6MTc3MDEwNDU0NCwiZXhwIjoxNzcwNzA5MzQ0fQ.0hIEZgYvs6syiNNs3QR1I60x0gDRyWoJh-1ObZe8j10",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "{{BaseURL}}/tickets",
+          "host": [
+            "{{BaseURL}}"
+          ],
+          "path": [
+            "tickets"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET TICKETS (Filters + Search + Pagination)",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODBlZjIwMmRmYTMyOTFkZGFiYTU4OSIsImlhdCI6MTc3MDA1ODU0OCwiZXhwIjoxNzcwNjYzMzQ4fQ.FwLjNR3HMEEmRcBBHu1fHWvaJfaR_Kehoh99bF0M5LY",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"Login issue\",\r\n  \"description\": \"Cannot login\",\r\n  \"category\": \"Technical\",\r\n  \"priority\": \"High\"\r\n}"
+        },
+        "url": {
+          "raw": "{{BaseURL}}/tickets?status=Open&priority=High&category=Technical&q=login&page=1&limit=5",
+          "host": [
+            "{{BaseURL}}"
+          ],
+          "path": [
+            "tickets"
+          ],
+          "query": [
+            {
+              "key": "status",
+              "value": "Open"
+            },
+            {
+              "key": "priority",
+              "value": "High"
+            },
+            {
+              "key": "category",
+              "value": "Technical"
+            },
+            {
+              "key": "q",
+              "value": "login"
+            },
+            {
+              "key": "page",
+              "value": "1"
+            },
+            {
+              "key": "limit",
+              "value": "5"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "UPDATE TICKET",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODBhODY1YmExYmJkNjM2ZWFlZTRiNSIsImlhdCI6MTc3MDA2MzUyOSwiZXhwIjoxNzcwNjY4MzI5fQ.3U1yPf0FAjutCWYUf5jdFnceRAjwKPzMNDyGd0N6rMg",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": " {\r\n    \"title\": \"Notification bug\",\r\n    \"description\": \"Push notifications not appearing\",\r\n    \"category\": \"Technical\",\r\n    \"priority\": \"Low\"\r\n  }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{BaseURL}}/tickets/6980e046f8e51dcd1aa28236",
+          "host": [
+            "{{BaseURL}}"
+          ],
+          "path": [
+            "tickets",
+            "6980e046f8e51dcd1aa28236"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DELETE TICKET",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODBhODY1YmExYmJkNjM2ZWFlZTRiNSIsImlhdCI6MTc3MDA2MzUyOSwiZXhwIjoxNzcwNjY4MzI5fQ.3U1yPf0FAjutCWYUf5jdFnceRAjwKPzMNDyGd0N6rMg",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\":\"rusiru@gmail.com\",\r\n    \"password\":\"Rusiru@123\"   \r\n}"
+        },
+        "url": {
+          "raw": "{{BaseURL}}/tickets/6980e046f8e51dcd1aa28236",
+          "host": [
+            "{{BaseURL}}"
+          ],
+          "path": [
+            "tickets",
+            "6980e046f8e51dcd1aa28236"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "BaseURL",
+      "value": "",
+      "type": "default"
+    }
+  ]
+}
