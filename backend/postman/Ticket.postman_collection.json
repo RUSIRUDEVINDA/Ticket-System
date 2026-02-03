@@ -80,7 +80,7 @@
         "header": [
           {
             "key": "Authorization",
-            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODBhODY1YmExYmJkNjM2ZWFlZTRiNSIsImlhdCI6MTc3MDEwNDU0NCwiZXhwIjoxNzcwNzA5MzQ0fQ.0hIEZgYvs6syiNNs3QR1I60x0gDRyWoJh-1ObZe8j10",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODBhODY1YmExYmJkNjM2ZWFlZTRiNSIsImlhdCI6MTc3MDE1MDg0NSwiZXhwIjoxNzcwNzU1NjQ1fQ.Bt6IIq1lmlDU-23t36PZgh0cDESdllAHfUtCB4dMkOQ",
             "type": "text"
           }
         ],
@@ -110,7 +110,7 @@
         "header": [
           {
             "key": "Authorization",
-            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODBlZjIwMmRmYTMyOTFkZGFiYTU4OSIsImlhdCI6MTc3MDA1ODU0OCwiZXhwIjoxNzcwNjYzMzQ4fQ.FwLjNR3HMEEmRcBBHu1fHWvaJfaR_Kehoh99bF0M5LY",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODBhMzg5ZTJjYjZmZWQ1YTU4ZmI4YyIsImlhdCI6MTc3MDE0NzAxMywiZXhwIjoxNzcwNzUxODEzfQ.eWbVbTaG_VQ-nva8xaYctwxsbx6TToe8QK7TT9jRuXM",
             "type": "text"
           }
         ],
@@ -119,7 +119,7 @@
           "raw": "{\r\n  \"title\": \"Login issue\",\r\n  \"description\": \"Cannot login\",\r\n  \"category\": \"Technical\",\r\n  \"priority\": \"High\"\r\n}"
         },
         "url": {
-          "raw": "{{BaseURL}}/tickets?status=Open&priority=High&category=Technical&q=login&page=1&limit=5",
+          "raw": "{{BaseURL}}/tickets?status=Open&priority=Low&category=Technical&page=1&limit=5",
           "host": [
             "{{BaseURL}}"
           ],
@@ -133,15 +133,11 @@
             },
             {
               "key": "priority",
-              "value": "High"
+              "value": "Low"
             },
             {
               "key": "category",
               "value": "Technical"
-            },
-            {
-              "key": "q",
-              "value": "login"
             },
             {
               "key": "page",
@@ -218,11 +214,44 @@
       "response": []
     }
   ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODBhODY1YmExYmJkNjM2ZWFlZTRiNSIsImlhdCI6MTc3MDE1MDg0NSwiZXhwIjoxNzcwNzU1NjQ1fQ.Bt6IIq1lmlDU-23t36PZgh0cDESdllAHfUtCB4dMkOQ",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
   "variable": [
     {
       "key": "BaseURL",
-      "value": "",
-      "type": "default"
+      "value": ""
     }
   ]
 }

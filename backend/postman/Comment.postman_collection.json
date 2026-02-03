@@ -48,18 +48,18 @@
         "header": [
           {
             "key": "Authorization",
-            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODBhMzg5ZTJjYjZmZWQ1YTU4ZmI4YyIsImlhdCI6MTc3MDEwNTM0OSwiZXhwIjoxNzcwNzEwMTQ5fQ.J60Naqtq4YxT6X0A0sJ-cPDf33mnPWGyKul7ZUW7Q-o",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODBhMzg5ZTJjYjZmZWQ1YTU4ZmI4YyIsImlhdCI6MTc3MDE0NzAxMywiZXhwIjoxNzcwNzUxODEzfQ.eWbVbTaG_VQ-nva8xaYctwxsbx6TToe8QK7TT9jRuXM",
             "type": "text"
           }
         ],
         "url": {
-          "raw": "{{BaseURL}}/tickets/6981a5377b7bbeb445810c70/comments",
+          "raw": "{{BaseURL}}/tickets/69824e261689384edccb31eb/comments",
           "host": [
             "{{BaseURL}}"
           ],
           "path": [
             "tickets",
-            "6981a5377b7bbeb445810c70",
+            "69824e261689384edccb31eb",
             "comments"
           ]
         }
@@ -67,11 +67,44 @@
       "response": []
     }
   ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODBhODY1YmExYmJkNjM2ZWFlZTRiNSIsImlhdCI6MTc3MDE1MDg0NSwiZXhwIjoxNzcwNzU1NjQ1fQ.Bt6IIq1lmlDU-23t36PZgh0cDESdllAHfUtCB4dMkOQ",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
   "variable": [
     {
       "key": "BaseURL",
-      "value": "",
-      "type": "default"
+      "value": ""
     }
   ]
 }
