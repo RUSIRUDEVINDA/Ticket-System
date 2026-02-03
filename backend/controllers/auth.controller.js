@@ -5,7 +5,7 @@ import bcrypt from "bcryptjs";
 // Validation helper functions
 const validateEmail = (email) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
+    return emailRegex.test(email); 
 };
 
 const validatePassword = (password) => {
