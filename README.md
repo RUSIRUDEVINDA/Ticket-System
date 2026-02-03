@@ -6,6 +6,7 @@
 ![Express.js](https://img.shields.io/badge/Framework-Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/Database-MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
 ![JWT](https://img.shields.io/badge/Auth-JWT-000000?style=for-the-badge&logo=json-web-tokens&logoColor=white)
+![RBAC](https://img.shields.io/badge/RBAC-Implemented-4c1?style=for-the-badge&logo=key&logoColor=white)
 ![Postman](https://img.shields.io/badge/Tools-Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
 
 </div>
