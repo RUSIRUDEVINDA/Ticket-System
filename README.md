@@ -83,8 +83,8 @@ To run this project, you will need to add the following environment variables to
 | Variable | Description | Default |
 | :--- | :--- | :--- |
 | `PORT` | The port the server will run on | `5001` |
-| `MONGO_URI` | Your MongoDB connection string | - |
-| `JWT_SECRET` | Secret key for signing JWT tokens | - |
+| `MONGO_URI` | Your MongoDB connection string | `YOUR_MONGO_URI_HERE` |
+| `JWT_SECRET` | Secret key for signing JWT tokens | `your_jwt_secret_here` |
 | `JWT_EXPIRES_IN` | Token expiration time | `7d` |
 | `NODE_ENV` | Environment (development/production) | `development` |
 
