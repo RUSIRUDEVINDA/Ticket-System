@@ -2,6 +2,7 @@
   "info": {
     "_postman_id": "e63f75b2-9023-4144-95ce-bb53053216d3",
     "name": "Comment",
+    "description": "Overview\nThe Comment collection provides endpoints to add comments to tickets and retrieve comments for a specific ticket. Endpoints use the {{BaseURL}} variable to support multiple environments.\n\nBase URL\nUse {{BaseURL}} for all endpoints, for example: {{BaseURL}}/tickets/:id/comments\n\nAuthentication\nThis collection uses bearer token at the collection level:\nAuthorization: Bearer {{token}}\nObtain the token from the Auth collection’s LOGIN USER endpoint and save it in your active environment as token.\n\nRelationships\n- Ticket: Primary resource representing a support ticket to which comments are attached.\n- Auth: Source of bearer tokens used by this collection.\n\nRun in Postman\nUse the Run in Postman button on this doc to import the collection and select Environment Variable to supply {{BaseURL}} and {{token}}.",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
     "_exporter_id": "41718582",
     "_collection_link": "https://go.postman.co/collection/41718582-e63f75b2-9023-4144-95ce-bb53053216d3?source=collection_link"
@@ -72,7 +73,7 @@
     "bearer": [
       {
         "key": "token",
-        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODBhODY1YmExYmJkNjM2ZWFlZTRiNSIsImlhdCI6MTc3MDE1MDg0NSwiZXhwIjoxNzcwNzU1NjQ1fQ.Bt6IIq1lmlDU-23t36PZgh0cDESdllAHfUtCB4dMkOQ",
+        "value": "{{token}}",
         "type": "string"
       }
     ]
@@ -99,12 +100,6 @@
           ""
         ]
       }
-    }
-  ],
-  "variable": [
-    {
-      "key": "BaseURL",
-      "value": ""
     }
   ]
 }
